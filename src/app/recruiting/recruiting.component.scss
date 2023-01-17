@@ -1,0 +1,42 @@
+.recruiting-btns {
+  margin-bottom: 60px;
+
+  .btn {
+    min-width: 189px;
+    min-height: 80px;
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  .btn-plus {
+    background-color: #0060fc;
+    color: #fff;
+    border-radius: 50%;
+    min-width: 80px;
+    min-height: 80px;
+    font-family: Roboto;
+    font-weight: 900;
+    font-size: 30px;
+  }
+
+  .mr {
+    margin-right: 10px;
+  }
+
+  .active {
+    background-color: #0060fc;
+    color: #fff;
+  }
+}
+
+h1 {
+  font-family: sans-serif;
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.floatright {
+  float: right;
+  position: absolute;
+}

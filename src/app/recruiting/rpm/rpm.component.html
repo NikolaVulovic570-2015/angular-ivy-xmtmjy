@@ -1,0 +1,128 @@
+<mat-card class="top-card">
+  <mat-form-field appearance="standard" floatLabel="never">
+    <mat-select placeholder="Rate per mile">
+      <mat-option
+        [ngClass]="i === selectedRpm ? 'active' : ''"
+        *ngFor="let option of rpmOptions; let i = index"
+        [value]="option"
+        (click)="selectedRpmOption(i)"
+        >{{ option }}</mat-option
+      >
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field appearance="standard" floatLabel="never">
+    <mat-select placeholder="Minimum">
+      <mat-option
+        [ngClass]="i === selectedMinimum ? 'active' : ''"
+        *ngFor="let option of minimumOptions; let i = index"
+        [value]="option"
+        (click)="selectedMinimumOption(i)"
+        >{{ option }}</mat-option
+      >
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field appearance="standard" floatLabel="never">
+    <mat-select placeholder="$/mile">
+      <mat-option
+        [ngClass]="i === selectedMile ? 'active' : ''"
+        *ngFor="let option of mileOptions; let i = index"
+        [value]="option"
+        (click)="selectedMileOption(i)"
+        >{{ option }}</mat-option
+      >
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field appearance="standard" floatLabel="never">
+    <mat-select placeholder="Per driver">
+      <mat-option
+        [ngClass]="i === selectedPerDriver ? 'active' : ''"
+        *ngFor="let option of perDriverOptions; let i = index"
+        [value]="option"
+        (click)="selectedPerDriverOption(i)"
+        >{{ option }}</mat-option
+      >
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field appearance="standard" floatLabel="never">
+    <mat-select placeholder="Weekly">
+      <mat-option
+        [ngClass]="i === selectedWeekly ? 'active' : ''"
+        *ngFor="let option of weeklyOptions; let i = index"
+        [value]="option"
+        (click)="selectedWeeklyOption(i)"
+        >{{ option }}</mat-option
+      >
+    </mat-select>
+  </mat-form-field>
+
+  <mat-slide-toggle
+    class="floatright"
+    (change)="toggleState()"
+  ></mat-slide-toggle>
+</mat-card>
+
+<mat-card class="bottom-card">
+  <mat-form-field appearance="standard" floatLabel="never">
+    <mat-select placeholder="Rate per mile">
+      <mat-option
+        [ngClass]="i === selectedRpm ? 'active' : ''"
+        *ngFor="let option of rpmOptions; let i = index"
+        [value]="option"
+        (click)="selectedRpmOption(i)"
+        >{{ option }}</mat-option
+      >
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field appearance="standard" floatLabel="never">
+    <mat-select placeholder="Minimum">
+      <mat-option
+        [ngClass]="i === selectedMinimum ? 'active' : ''"
+        *ngFor="let option of minimumOptions; let i = index"
+        [value]="option"
+        (click)="selectedMinimumOption(i)"
+        >{{ option }}</mat-option
+      >
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field appearance="standard" floatLabel="never">
+    <mat-select placeholder="$/mile">
+      <mat-option
+        [ngClass]="i === selectedMile ? 'active' : ''"
+        *ngFor="let option of mileOptions; let i = index"
+        [value]="option"
+        (click)="selectedMileOption(i)"
+        >{{ option }}</mat-option
+      >
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field appearance="standard" floatLabel="never">
+    <mat-select placeholder="Per driver">
+      <mat-option
+        [ngClass]="i === selectedPerDriver ? 'active' : ''"
+        *ngFor="let option of perDriverOptions; let i = index"
+        [value]="option"
+        (click)="selectedPerDriverOption(i)"
+        >{{ option }}</mat-option
+      >
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="standard" floatLabel="never">
+    <input matInput placeholder="12.01.2022." readonly />
+  </mat-form-field>
+
+  <mat-form-field appearance="standard" floatLabel="never">
+    <input matInput placeholder="02.02.2023." readonly />
+  </mat-form-field>
+
+  <div class="recruiting-btns floatright">
+    <button mat-raised-button class="successrate" [disabled]="!toggle">
+      View
+    </button>
+  </div>
+  <div class="recruiting-btns floatright">
+    <button mat-raised-button class="successrate fail" [disabled]="!toggle">
+      45%
+    </button>
+  </div>
+</mat-card>
