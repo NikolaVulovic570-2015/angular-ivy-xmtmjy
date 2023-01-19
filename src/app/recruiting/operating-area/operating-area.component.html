@@ -21,6 +21,12 @@
       >
     </mat-select>
   </mat-form-field>
+  <mat-form-field class="states" floatLabel="never">
+    <input matInput placeholder="CA" readonly />
+  </mat-form-field>
+  <mat-form-field appearance="standard" floatLabel="never">
+    <input matInput placeholder="WY" readonly />
+  </mat-form-field>
 
   <mat-slide-toggle
     class="floatright"
@@ -89,7 +95,7 @@
   </div>
   <div class="recruiting-btns floatright">
     <button mat-raised-button class="successrate fail" [disabled]="!toggle">
-      -
+      %
     </button>
   </div>
 </mat-card>
